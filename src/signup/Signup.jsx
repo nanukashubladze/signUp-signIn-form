@@ -32,6 +32,12 @@ const Signup = () => {
             </button>
         </div>
       </form>
+      <div className='login'>
+        <p>Already have an account ?</p>
+        <button type="submit" className="btn btn-primary">
+          Login
+        </button>
+      </div>
     </div>
   )
 }
