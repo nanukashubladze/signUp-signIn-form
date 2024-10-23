@@ -28,12 +28,12 @@ const Signup = () => {
   const validate = (values) => {
     const errors = {};
     const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-    const usernameRegex = /^[a-zA-Z0-9_]{3,16}$/; // New regex for username validation
+    const usernameRegex = /^(?!\d+$)[a-zA-Z0-9_]{3,16}$/;
 
     if (!values.username) {
       errors.username = "Username is required!";
     } else if (!usernameRegex.test(values.username)) {
-      errors.username = "Don't use punctuation marks and it must contain 3-16 characters!";
+      errors.username = "Don't use punctuation marks and numbers. it must contain 3-16 letters!";
     }
 
     if (!values.email) {
