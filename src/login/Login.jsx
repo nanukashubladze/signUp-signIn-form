@@ -27,7 +27,7 @@ const Login = () => {
         </div>
       </form>
       <div className='login'>
-        <p>Don't  have an account ?</p>
+        <p className='quest'>Don't  have an account ?</p>
         <Link to="/" type="submit" className="btn btn-success">
           Sing up
         </Link>
